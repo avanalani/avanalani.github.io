@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <p id="Generator"></p>
+
+    <style>
+        body {
+            background-color: #E2FAB5;
+            font-size: 40px;
+            color: #007686;
+            font-family: Fraternite;
+        }
+
+        button {
+            font-size: 30px;
+            background-color: #007686;
+            color: #E2FAB5;
+            font-family: Fraternite;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 24px;
+            transition-duration: 0.4s
+        }
+
+        button:hover {
+            background-color: #BADA55;
+            color: #e1efb4;
+        }
+    </style>
+
+    <body>
+        <p style="font-size: 50px">Sheehanesque Random Prompt Generator</p>
+
+        <script>
+            const Prompts = ["Occult", "Porcelain", "Lace", "Animal", "Gothic", "Ornamental", "Magic", "Hands", "Bones", "Teeth", "Bugs", 
+                            "Fish", "Stars", "Plants", "Blade", "Snake", "Accent Color", "Repeating design", "Moths", "Moon", "Mushroom", "Fairy",
+                            "Portrait", "Eye(s)"];
+
+            let prompt1 = getRandomInt(Prompts.length);
+            let prompt2 = getRandomInt(Prompts.length);
+            let prompt3 = getRandomInt(Prompts.length);
+        
+            while (prompt1 == prompt2) {
+                prompt2 = getRandomInt(Prompts.length);
+            }
+            while (prompt1 == prompt3) {
+                prompt3 = getRandomInt(Prompts.length);
+            }
+            while (prompt2 == prompt3) {
+                prompt3 = getRandomInt(Prompts.length);
+            }
+        
+            document.write(Prompts[prompt1] + ", " + Prompts[prompt2] + ", and " + Prompts[prompt3]);
+        
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+        </script> 
+    </body>
+
+    <p style="font-size: 20px">Reload page for new prompts. Made for: Leafy Tattz. 2025</p>
+
+    <a href="https://sheehanpersonett.wixsite.com/leafy-tattz" target="_blank" class="btn">
+        <button>Visit Sheehan</button>
+    </a>
+</html>
